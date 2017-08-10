@@ -11,22 +11,54 @@
 		<meta charset="utf-8" />
 	</head>
 	<style>
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
 		*{
 			padding: 0;
 			margin: 0;
 		}
-		#bg{
+		/*#bg{
 			background-image: url(img/qixibg.jpg);
-			background-position: center center;
+			background-position: center top;
 			background-size: cover;
 			position: absolute;
 			width: 100%;
-			height: 100%;	
+			height: 100%;
+		}*/
+		width: 800px;
+			height: 600px;
+			margin: 0px auto;
+		}
+		#allcanvas{
+			position: relative;
+			width: 800px;
+			height: 600px;
+			margin: 0px;
+		}
+		#canvas1{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+		}
+		#canvas2{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 2;
 		}
 	</style>
 	<body>
-		<div class="" id="bg">
-			
+		<div class="all_bg" id="bg">
+			<div id="allcanvas">
+				<canvas id="canvas1"></canvas>
+				<canvas id="canvas2"></canvas>
+			</div>
 		</div>
+		<script type="text/javascript" src="js/commonFunctions.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/background.js"></script>
 	</body>
 </html>
